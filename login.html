@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleLogin.css">
+    <title>Login Pulstap</title>
+</head>
+<body>
+    <div class="container">
+        <div class="lado-esquerdo"> 
+            <img src="Fotos/PulsetapImg/LogoPulstap-Nome-Descricao.png" alt="Erro ao exibir Foto da logo" class="logo">
+            <img src="Fotos/FotoBeckNFCLogin.png" alt="Erro ao exibir foto do NFC" class="cards">
+        </div>
+
+        <div class="lado-direito">
+            <div class="circulo-gradiente"></div>
+            <h1 class="titulo">Login</h1>
+            <form onsubmit="return verificacaoFormulario()">
+                <label for="email">Email:</label>
+                <input type="email" class="email" id= "email" placeholder="Email: ">
+
+                <label for="password">Senha:</label>
+                <div class="senha-container">
+                    <input type="password" class="password" id="password" placeholder="Senha: ">
+                    <span class="toggle-visibility" onclick="togglePassword()">
+                        <svg id="eye-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 4.5C7 4.5 2.73 8.11 1 12c1.73 3.89 6 7.5 11 7.5s9.27-3.61 11-7.5c-1.73-3.89-6-7.5-11-7.5z" stroke="#ccc" stroke-width="1.5"/>
+                            <circle id="eye-circle" cx="12" cy="12" r="3" fill="transparent"/>
+                        </svg>
+                    </span>
+                </div>
+
+                <a class="recuperar-senha" href="#">Recuperar Senha</a>
+                <p id="Validacao" style="color: red;"></p>
+                <button type="submit" class="logar">Acessar Conta</button>
+                <a class="Cadastrar-Conta" href="cadastroUser.html">Cadastrar Conta</a>
+            </form>
+            <img src="Fotos/LoginDetalhe.png" alt="Erro ao Exibir Decoração" class="decoracao">
+        </div>
+    </div>
+
+    <script>
+        function verificacaoFormulario(){
+            const emailInput = document.getElementById("email").value.trim();
+            const passwordInput = document.getElementById("password").value.trim();
+            const Erro_msg = document.getElementById("Validacao");
+
+            if(!passwordInput||!emailInput)
+            {
+                Erro_msg.textContent = "Por favor, preencha todos os campos";
+                return false;
+            }
+            else{
+                Erro_msg.textContent = "";
+                return true;
+            }
+        }
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const eyeCircle = document.getElementById("eye-circle");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text"; 
+                eyeCircle.setAttribute("fill", "#ccc");  
+            } else {
+                passwordInput.type = "password"; 
+                eyeCircle.setAttribute("fill", "transparent");  
+            }
+        }
+    </script>
+</body>
+</html>

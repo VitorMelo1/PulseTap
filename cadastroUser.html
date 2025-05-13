@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCadastro.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Pulstap Cadastro</title>
+</head>
+<body>
+    <h1 class="titulo">Cadastro De Conta</h1>
+    
+    <form>
+        <fieldset>
+            <div class="box">
+                <div class="lado-esquerdo">
+                    <div class="inputBox">
+                        <label for="email" class="labelinput">Email:</label>
+                        <input name="email" id="email" class="inputUser" type="email" placeholder="Exemplo123@exemplo.com" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="password" class="labelinput">Senha:</label>
+                        <input name="password" id="password" class="inputUser" type="password" placeholder="Exemplo!12?">
+                    </div>
+                    <div class="inputBox">
+                        <label for="passwordVr" class="labelinput">Confirmar Senha:</label>
+                        <input name="passwordVr" id="passwordVr" class="inputUser" type="password" placeholder="Exemplo!12?">
+                    </div>
+                    <div class="inputRadio">
+                        <input name="TermsService" id="TermsService" class="RadioUser" type="radio">
+                        <label for="TermsService" class="labelinput">
+                            Li e aceito os <a href="leis-pulsetap/Termos.html">Termos de Serviço</a> e <a href="leis-pulsetap/politica.html">Política de Privacidade</a>.
+                        </label>
+                    </div>
+                    <input type="submit" name="submit" class="submit" value="Criar Conta">
+                </div>
+
+                <div class="lado-direito">
+                    <div class="perfilCard">
+                        <div class="profile-picture" id="profilePicture">
+                            <img id="profileImage" src="#" alt="Foto de Perfil">
+                            <i class="fas fa-user" style="font-size: 100px; color: white;"></i>
+                        </div>
+                        <label class="upload-btn" for="uploadInput">Alterar Foto</label>
+                        <input type="file" id="uploadInput" accept="image/*">
+                    </div>
+
+                    <div class="inputConteiner">
+                        <label for="userName" class="labelConteiner">Nome de Usuario:</label>
+                        <input type="text" id="userName" name="userName" class="userName" placeholder="Nome...">
+                    </div>
+
+                    <div class="conteiner">
+                        <div class="inputConteiner">
+                            <label for="dateUser" class="labelConteiner">Dt Nascimento:</label>
+                            <input type="date" id="dateUser" name="dateUser" class="dateUser">
+                        </div>
+                        <div class="inputConteiner">
+                            <label for="genero" class="labelConteiner">Gênero:</label>
+                            <input type="text" id="genero" name="genero" class="inputConteiner" placeholder="Selecione seu gênero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        
+        const marcacoes = document.querySelectorAll('.RadioUser');
+
+        marcacoes.forEach(radio => {
+            radio.addEventListener('click', function () {
+               
+                if (radio.checked) {
+                    const previouslyChecked = radio.dataset.checked === 'true';
+                    if (previouslyChecked) {
+                        radio.checked = false;
+                        radio.dataset.checked = 'false'; // Atualiza o estado
+                    } else {
+                        
+                        radio.dataset.checked = 'true';
+                    }
+                }
+            });
+        });
+
+   
+        const uploadInput = document.getElementById('uploadInput');
+        const profileImage = document.getElementById('profileImage');
+        const profilePicture = document.getElementById('profilePicture');
+        const userIcon = profilePicture.querySelector('i');
+
+        uploadInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    profileImage.src = e.target.result;
+                    profileImage.style.display = 'block';
+                    userIcon.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

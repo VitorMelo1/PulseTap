@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Serviço</title>
+    <style>
+        /* Reset de estilo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilo do corpo */
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container central */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Conteúdo dos termos */
+        .content {
+            text-align: left;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Botão de voltar */
+        .btn-back {
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Termos de Serviço</h1>
+        <div class="content">
+            <p>Bem-vindo aos Termos de Serviço. Ao utilizar nosso site, você concorda com todas as condições abaixo.</p>
+
+            <h2>1. Aceitação dos Termos</h2>
+            <p>Ao acessar ou utilizar este site, você concorda em cumprir estes termos e todas as leis aplicáveis. 
+               Caso não concorde com algum dos termos, você não está autorizado a usar este serviço.</p>
+
+            <h2>2. Uso Permitido</h2>
+            <p>Você só pode utilizar este site para fins legais e em conformidade com as leis vigentes. 
+               É proibido violar qualquer direito de terceiros, incluindo direitos autorais e propriedade intelectual.</p>
+
+            <h2>3. Criação de Conta</h2>
+            <p>Ao criar uma conta, você é responsável por manter suas credenciais seguras. Qualquer atividade realizada sob sua conta é de sua responsabilidade.</p>
+
+            <h2>4. Coleta e Uso de Dados</h2>
+            <p>Seguimos todas as leis de proteção de dados. Para mais informações, consulte nossa <a href="#">Política de Privacidade</a>.</p>
+
+            <h2>5. Alterações nos Termos</h2>
+            <p>Podemos alterar estes termos a qualquer momento. As mudanças serão informadas nesta página.</p>
+
+            <h2>6. Limitação de Responsabilidade</h2>
+            <p>Não somos responsáveis por quaisquer danos diretos ou indiretos decorrentes do uso do site.</p>
+
+            <h2>7. Encerramento de Conta</h2>
+            <p>Podemos suspender ou encerrar sua conta a qualquer momento, sem aviso prévio, se você violar os termos.</p>
+
+            <h2>8. Lei Aplicável</h2>
+            <p>Estes termos serão regidos pelas leis brasileiras, e quaisquer disputas serão resolvidas nos tribunais do Brasil.</p>
+
+            <h2>9. Contato</h2>
+            <p>Se você tiver dúvidas, entre em contato pelo e-mail: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a>.</p>
+        </div>
+
+        <button class="btn-back" onclick="goBack()">Voltar</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back(); 
+        }
+    </script>
+</body>
+</html>

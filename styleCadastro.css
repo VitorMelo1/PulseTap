@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Ledger&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(35, 35, 35, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titulo{
+    border-bottom: 1px solid aqua;
+    height: 35px;
+    margin-bottom: 54px;
+    margin-top: 50px;
+  }
+  fieldset{
+    background: radial-gradient(circle, rgb(64, 64, 64), rgba(35, 35, 35, 1) 60%);
+    padding: 20px 50px 50px 50px;
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; 
+    gap: 30px; 
+    height: 100%; 
+}
+
+.lado-esquerdo, .lado-direito {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%; 
+}
+  .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .inputUser{
+    color: white;
+    background-color: transparent;
+    border: solid 1px white;
+    border-radius: 15px;
+    padding: 18px 0px 18px 15px;
+    width: 450px;
+    
+  }
+  .inputUser::placeholder{
+    width: 100%;
+    font-size: 15px;
+  }
+  .labelinput{
+    margin: 9px;
+  }
+  .inputRadio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0px 15px 0px;
+    width: 300px;
+  }
+  .RadioUser{
+    appearance: none;
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+
+    border: 2px solid #000;
+    border-radius: 5px; 
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    border-color: white;
+  }
+  .RadioUser:checked{
+    background-color: transparent;
+  }
+  .RadioUser:checked::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00b4d8;
+    position: absolute;
+    border-radius: 5px;
+  }
+  a{
+    color: #00D8FF;
+  }
+  .submit{
+    font-family: 'Ledger', serif;
+    background: radial-gradient(circle, rgba(0, 91, 176, 1), rgba(1, 68, 131, 1) 70%);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+    width: 75%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .submit:hover{
+    background: radial-gradient(circle, rgba(0, 91, 176, 1), rgba(1, 68, 131, 1) 100%);
+  }
+  .lado-direito{
+    align-items: center;
+  }
+
+  .perfilCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444; 
+    border-radius: 15px; 
+    width: 200px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    background-color: #777; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+  }
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: none; 
+  }
+
+
+.upload-btn {
+  background: radial-gradient(circle, rgba(0, 91, 176, 1), rgba(1, 68, 131, 1) 90%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 0.5px solid white;
+
+}
+
+.upload-btn:hover {
+  background: radial-gradient(circle, rgba(0, 91, 176, 1), rgba(1, 68, 131, 1) 70%);
+}
+
+
+#uploadInput {
+  display: none;
+}
+.lado-esquerdo{
+  margin-right: 30px;
+}
+.inputConteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteiner{
+  display: flex;
+  gap: 10px; 
+  justify-content: space-between; 
+  flex-wrap: wrap;
+}
+.userName{
+  color: white;
+  background-color: transparent;
+  border: solid 1px white;
+  padding-left: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 45px;
+  width: 350px;
+
+}
+.userName::placeholder{
+  width: 100%;
+  font-size: 15px;
+}
+.labelConteiner{
+  margin-bottom: 10px;
+}
+.dateUser{
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.inputConteiner{
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
